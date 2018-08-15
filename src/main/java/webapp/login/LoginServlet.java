@@ -21,7 +21,6 @@ public class LoginServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		
 		request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
 	}
 	
@@ -33,7 +32,7 @@ public class LoginServlet extends HttpServlet {
 		
 		if(isUserVaild) {
 			request.getSession().setAttribute("name", name);
-			response.sendRedirect("/todo.do");
+			response.sendRedirect("/list_todo.do");
 		}
 		else {
 			request.setAttribute("errorMessage", "Invaid Credentials, please try again");

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import webapp.todo.TodoService;
 
 // This is the URL for the todo servlet
-@WebServlet(urlPatterns = "/todo.do")
+@WebServlet(urlPatterns = "/list_todo.do")
 public class ShowTodoServlet extends HttpServlet {
 
 	private TodoService todoservice = new TodoService();
@@ -28,7 +28,7 @@ public class ShowTodoServlet extends HttpServlet {
 /*	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String newTodo = request.getParameter("todo");
 		todoservice.addTodo(new Todo(newTodo));
-		response.sendRedirect("/todo.do");
+		response.sendRedirect("/list_todo.do");
 	}*/
 	
 

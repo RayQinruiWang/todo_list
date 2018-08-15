@@ -25,7 +25,7 @@
 		<a href="/" class="navbar-brand">Ray's to-do List</a>
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="#">Home</a></li>
-			<li><a href="/todo.do">Todos</a></li>
+			<li><a href="/list_todo.do">Todos</a></li>
 			<li><a href="https://ozone.oakton.com.au/">Ozone</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
@@ -43,10 +43,7 @@
 				<li>${todo.name}; &nbsp; <a href="/delete-todo.do?todo=${todo.name}">Delete</a></li>
 			</c:forEach>	
 		</ol>
-		<form action="/add-todo.do" method = "post" >
-			Add New:
-			<input type= "text" name = "todo"/>  <input type= "submit" value = "Add new to-do">
-		</form>
+		<a href="/add-todo.do">Add New Todo</a>
 	</div>
 
 	<footer class="footer">

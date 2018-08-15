@@ -25,20 +25,28 @@
 		<a href="/" class="navbar-brand">Ray's to-do List</a>
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="#">Home</a></li>
+			<li><a href="/todo.do">Todos</a></li>
+			<li><a href="https://ozone.oakton.com.au/">Ozone</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/login.do">Login</a></li>
+			<li><a href="/logout.do">Logout</a></li>
 		</ul>
 	</nav>
 
 	<div class="container">
-			Welcome to the to-do list developed by Ray.Wang@Oakton <br><br>
-			Please login first <br>
-			<form action="/login.do" method= "post">
-				<p><font color = "red"> ${errorMessage}</font></p>
-					Enter your name: <input type="text" name="name"/>
-					Enter your password: <input type="password" name="password"/> <input type = "submit" value = "login">
-			</form>
+			Some front-end magic still has to happen here <br>
+			But anyways, welcome ${name}, here's your to-dos: <br>
+
+		<ol>
+			<%-- the "c" here in the for loop is the prefix defined in the taglib above --%>
+			<c:forEach items = "${todos}" var= "todo">
+				<li>${todo.name}; &nbsp; <a href="/delete-todo.do?todo=${todo.name}">Delete</a></li>
+			</c:forEach>	
+		</ol>
+		<form action="/add-todo.do" method = "post" >
+			Add New:
+			<input type= "text" name = "todo"/>  <input type= "submit" value = "Add new to-do">
+		</form>
 	</div>
 
 	<footer class="footer">

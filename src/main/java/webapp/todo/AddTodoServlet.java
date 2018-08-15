@@ -20,15 +20,16 @@ public class AddTodoServlet extends HttpServlet {
 	private static final long serialVersionUID = -7121242424128655492L;
 
 	@Override
-/*	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		request.getSession().setAttribute("todos", todoservice.retrieveTodos());
-		request.getRequestDispatcher("/WEB-INF/views/todo_list.jsp").forward(request, response);
-	}*/
+
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		
+		request.getRequestDispatcher("/WEB-INF/views/new_todo.jsp").forward(request, response);
+	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String newTodo = request.getParameter("todo");
 		todoservice.addTodo(new Todo(newTodo));
-		response.sendRedirect("/todo.do");
+		response.sendRedirect("/list_todo.do");
 	}
 	
 

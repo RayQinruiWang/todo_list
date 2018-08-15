@@ -25,20 +25,21 @@
 		<a href="/" class="navbar-brand">Ray's to-do List</a>
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="#">Home</a></li>
+			<li><a href="/list_todo.do">Todos</a></li>
+			<li><a href="https://ozone.oakton.com.au/">Ozone</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/login.do">Login</a></li>
+			<li><a href="/logout.do">Logout</a></li>
 		</ul>
 	</nav>
 
 	<div class="container">
-			Welcome to the to-do list developed by Ray.Wang@Oakton <br><br>
-			Please login first <br>
-			<form action="/login.do" method= "post">
-				<p><font color = "red"> ${errorMessage}</font></p>
-					Enter your name: <input type="text" name="name"/>
-					Enter your password: <input type="password" name="password"/> <input type = "submit" value = "login">
-			</form>
+			Please specify your new action item <br>
+
+		<form action="/add-todo.do" method = "post" >
+			Add New:
+			<input type= "text" name = "todo"/>  <input type= "submit" value = "Add new to-do">
+		</form>
 	</div>
 
 	<footer class="footer">
