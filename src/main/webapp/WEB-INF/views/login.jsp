@@ -25,6 +25,7 @@
 		<a href="/" class="navbar-brand">Ray's to-do List</a>
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="#">Home</a></li>
+			<li><a href="/todo.do">Todos</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 			<li><a href="/login.do">Login</a></li>
