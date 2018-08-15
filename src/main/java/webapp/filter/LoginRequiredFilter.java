@@ -28,7 +28,8 @@ public class LoginRequiredFilter implements Filter {
 		} else {
 			request.getRequestDispatcher("?login.do").forward(serveletRequest, serveletResponse);
 		}
-		System.out.println(request.getRequestURI());
+//		Temporary report in the console
+//		System.out.println(request.getRequestURI());
 	}
 
 	@Override
