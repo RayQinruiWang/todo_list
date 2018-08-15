@@ -473,3 +473,11 @@
 0:0:0:0:0:0:0:1 - - [15/Aug/2018:17:19:19 +1000] "GET /webjars/bootstrap/3.3.6/css/bootstrap.min.css HTTP/1.1" 304 - http-bio-8080-exec-7 0
 0:0:0:0:0:0:0:1 - - [15/Aug/2018:17:19:19 +1000] "GET /webjars/bootstrap/3.3.6/js/bootstrap.min.js HTTP/1.1" 304 - http-bio-8080-exec-9 0
 0:0:0:0:0:0:0:1 - - [15/Aug/2018:17:19:19 +1000] "GET /webjars/jquery/1.9.1/jquery.min.js HTTP/1.1" 304 - http-bio-8080-exec-8 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2018:17:22:40 +1000] "POST /login.do HTTP/1.1" 200 1289 http-bio-8080-exec-4 4
+0:0:0:0:0:0:0:1 - - [15/Aug/2018:17:22:46 +1000] "POST /login.do HTTP/1.1" 302 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2018:17:22:46 +1000] "GET /list_todo.do HTTP/1.1" 200 1486 http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2018:17:22:48 +1000] "GET /add-todo.do HTTP/1.1" 200 1214 http-bio-8080-exec-4 21
+0:0:0:0:0:0:0:1 - - [15/Aug/2018:17:22:51 +1000] "POST /add-todo.do HTTP/1.1" 302 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2018:17:22:51 +1000] "GET /list_todo.do HTTP/1.1" 200 1575 http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2018:17:22:56 +1000] "GET /delete-todo.do?todo=something HTTP/1.1" 302 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [15/Aug/2018:17:22:56 +1000] "GET /list_todo.do HTTP/1.1" 200 1486 http-bio-8080-exec-4 15

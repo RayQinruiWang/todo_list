@@ -24,7 +24,7 @@
 	<nav class="navbar navbar-default">
 		<a href="/" class="navbar-brand">Ray's to-do List</a>
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
+			<li class="active"><a href="/list_todo.do">Home</a></li>
 			<li><a href="/list_todo.do">Todos</a></li>
 			<li><a href="https://ozone.oakton.com.au/">Ozone</a></li>
 		</ul>
@@ -37,8 +37,15 @@
 			Please specify your new action item <br>
 
 		<form action="/add-todo.do" method = "post" >
-			Add New:
-			<input type= "text" name = "todo"/>  <input type= "submit" value = "Add new to-do">
+			<fieldset class="form-group">
+				<label>Description</label>
+				<input name = "todo" type ="text" class="form-control"/><br>
+			</fieldset>
+			<fieldset class="form-group">
+				<label>Category</label>
+				<input name = "category" type ="text" class="form-control"/><br>
+			</fieldset>
+			<input type= "submit" value = "Submit" class = "btn btn-success">
 		</form>
 	</div>
 
