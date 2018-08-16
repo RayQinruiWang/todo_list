@@ -19,7 +19,8 @@ public class TodoService {
 			todos.clear();
 			while (myRs.next()) {
 				todos.add(new Todo(myRs.getString("description"),
-									myRs.getString("category")));
+									myRs.getString("category"),
+									myRs.getString("owner")));
 			}
 		}
 		catch(Exception exc) {

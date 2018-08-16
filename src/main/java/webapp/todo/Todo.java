@@ -3,11 +3,13 @@ package webapp.todo;
 public class Todo {
 	private String name;
 	private String category;
+	private String owner;
 
-	public Todo(String name, String catagory) {
+	public Todo(String name, String catagory, String owner) {
 		super();
 		this.name = name;
 		this.category = catagory;
+		this.owner = owner;
 	}
 
 	public String getName() {
@@ -26,6 +28,14 @@ public class Todo {
 		this.category = category;
 	}
 	
+	public String getOwner() {
+		return owner;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
 	@Override
 	public String toString() {
 		return String.format("Todo [name=%s, category=%s]", name, category);

@@ -29,7 +29,8 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String newTodo = request.getParameter("todo");
 		String category = request.getParameter("category");
-		todoservice.addTodo(new Todo(newTodo, category));
+		String owner = (String) request.getSession().getAttribute("name");
+		todoservice.addTodo(new Todo(newTodo, category, owner));
 		response.sendRedirect("/list_todo.do");
 	}
 	
