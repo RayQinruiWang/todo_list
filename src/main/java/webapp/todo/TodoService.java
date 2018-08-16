@@ -11,7 +11,7 @@ public class TodoService {
 	//Hard coded for now, ideally should talk to a database
 	private static List<Todo> todos = new ArrayList<Todo>();
 
-	public List<Todo> retrieveTodos(){
+	public List<Todo> retrieveTodosDescriptionAndCategory(){
 		try {
 			Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/to-do_users?useSSL=false","root","admin");
 			Statement myStmt = myConn.createStatement();

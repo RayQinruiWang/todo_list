@@ -14,7 +14,7 @@
 			</thead>
 			
 			<tbody>
-			<c:forEach items = "${todos}" var= "todo">
+			<c:forEach items = "${todo_description_and_categories}" var= "todo">
 				<tr>
 					<td>${todo.name}</td>
 					<td>${todo.category}</td>
