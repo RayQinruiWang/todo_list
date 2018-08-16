@@ -1,12 +1,27 @@
 package webapp.login;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 public class AuthenticationService{
 	public boolean isUserVaild(String name, String password) {
-		if ((name.equals("Ray")&&password.equals("develop"))||
-			(name.equals("David")&&password.equals("admin"))||
-			(name.equals("Simon")&&password.equals("admin"))){
-			return true;
+		try {
+			Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/to-do_users?useSSL=false","root","admin");
+			Statement myStmt = myConn.createStatement();
+			ResultSet myRs = myStmt.executeQuery("select * from users");
+			while (myRs.next()) {
+				if(name.equals(myRs.getObject("username")) &&
+					password.equals(myRs.getObject("password"))) {
+					return true;
+				}
+			}
 		}
-		else return false;
+		catch(Exception exc) {
+			exc.printStackTrace();
+		}
+		return false;
+		
 	}
 }

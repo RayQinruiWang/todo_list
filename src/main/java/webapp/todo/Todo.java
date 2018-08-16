@@ -3,7 +3,7 @@ package webapp.todo;
 public class Todo {
 	private String name;
 	private String category;
-	
+
 	public Todo(String name, String catagory) {
 		super();
 		this.name = name;
@@ -25,7 +25,7 @@ public class Todo {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-
+	
 	@Override
 	public String toString() {
 		return String.format("Todo [name=%s, category=%s]", name, category);

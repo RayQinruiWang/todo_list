@@ -25,11 +25,4 @@ public class ShowTodoServlet extends HttpServlet {
 		request.getRequestDispatcher("/WEB-INF/views/todo_list.jsp").forward(request, response);
 	}
 	
-/*	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		String newTodo = request.getParameter("todo");
-		todoservice.addTodo(new Todo(newTodo));
-		response.sendRedirect("/list_todo.do");
-	}*/
-	
-
 }

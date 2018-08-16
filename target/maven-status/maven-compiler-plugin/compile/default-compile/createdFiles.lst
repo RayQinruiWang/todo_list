@@ -1,4 +1,9 @@
+webapp\logout\LogoutServlet.class
+webapp\filter\LoginRequiredFilter.class
 webapp\login\AuthenticationService.class
 webapp\todo\Todo.class
+webapp\todo\AddTodoServlet.class
+webapp\todo\DeleteTodoServlet.class
 webapp\login\LoginServlet.class
+webapp\todo\ShowTodoServlet.class
 webapp\todo\TodoService.class
