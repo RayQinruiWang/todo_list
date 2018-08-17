@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/signup.do")
 public class SignUpServlet extends HttpServlet {
+	private SignUpService signupservice = new SignUpService();
 
 
 	/**
@@ -22,10 +23,11 @@ public class SignUpServlet extends HttpServlet {
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		
-		String name = request.getParameter("name");
+		String username = request.getParameter("name");
 		String password = request.getParameter("password");
-		System.out.println("Now we have to add user to database" + name + password);
+		signupservice.addUser(username, password);
+		request.getSession().setAttribute("name", username);
+		response.sendRedirect("/list_todo.do");
 	}
 
 }

@@ -4,6 +4,7 @@ C:\Users\ray.wang\eclipse-workspace\Ray_Todo_list\src\main\java\webapp\todo\Todo
 C:\Users\ray.wang\eclipse-workspace\Ray_Todo_list\src\main\java\webapp\filter\LoginRequiredFilter.java
 C:\Users\ray.wang\eclipse-workspace\Ray_Todo_list\src\main\java\webapp\login\LoginServlet.java
 C:\Users\ray.wang\eclipse-workspace\Ray_Todo_list\src\main\java\webapp\todo\TodoService.java
+C:\Users\ray.wang\eclipse-workspace\Ray_Todo_list\src\main\java\webapp\login\SignUpService.java
 C:\Users\ray.wang\eclipse-workspace\Ray_Todo_list\src\main\java\webapp\logout\LogoutServlet.java
 C:\Users\ray.wang\eclipse-workspace\Ray_Todo_list\src\main\java\webapp\login\AuthenticationService.java
 C:\Users\ray.wang\eclipse-workspace\Ray_Todo_list\src\main\java\webapp\login\SignUpServlet.java
