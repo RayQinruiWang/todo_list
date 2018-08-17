@@ -23,7 +23,7 @@ public class AddTodoServlet extends HttpServlet {
 
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
-		request.getRequestDispatcher("/WEB-INF/views/new_todo.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/views/add_todo.jsp").forward(request, response);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {

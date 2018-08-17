@@ -23,13 +23,12 @@ public class LoginRequiredFilter implements Filter {
 	public void doFilter(ServletRequest serveletRequest, ServletResponse serveletResponse, FilterChain chain)
 			throws IOException, ServletException {
 		HttpServletRequest request = (HttpServletRequest) serveletRequest;
-		if(request.getSession().getAttribute("name") != null) {
+		if(request.getSession().getAttribute("name") != null||
+			request.getServletPath().equals("/signup.do")) {
 			chain.doFilter(serveletRequest, serveletResponse);
 		} else {
 			request.getRequestDispatcher("?login.do").forward(serveletRequest, serveletResponse);
 		}
-//		Temporary report in the console
-//		System.out.println(request.getRequestURI());
 	}
 
 	@Override

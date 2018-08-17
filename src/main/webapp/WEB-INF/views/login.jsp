@@ -7,7 +7,7 @@
 			<li><a href="https://ozone.oakton.com.au/">Ozone</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/logout.do">Sign Up</a></li>
+			<li><a href="/signup.do">Sign Up</a></li>
 		</ul>
 	</nav>
 
