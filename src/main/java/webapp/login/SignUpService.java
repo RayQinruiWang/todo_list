@@ -5,6 +5,11 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 
 public class SignUpService{
+	public boolean usernotExist() {
+		// judge if username is available here
+		return true;
+	}
+	
 	public void addUser(String username, String password) {
 		try {
 			Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/to-do_users?useSSL=false","root","admin");
