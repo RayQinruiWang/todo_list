@@ -30,8 +30,20 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 		String newTodo = request.getParameter("todo");
 		String category = request.getParameter("category");
 		String owner = (String) request.getSession().getAttribute("name");
-		todoservice.addTodo(new Todo(newTodo, category, owner));
-		response.sendRedirect("/list_todo.do");
+		// has to implement into todo-service to check if the new todo exist
+		Boolean isTodoExist = false;
+		
+		// If exist, create warning and go back to 
+		if (isTodoExist) {
+			// Here goes the code if the to-do to be created exist
+			request.setAttribute("existingtodoerror", "This to-do exist, please try again");
+			response.sendRedirect("/add_todo.do");
+		}
+		
+		else{
+			todoservice.addTodo(new Todo(newTodo, category, owner));
+			response.sendRedirect("/list_todo.do");
+		}
 	}
 	
 
