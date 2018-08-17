@@ -28,25 +28,33 @@ public class TodoService {
 		}
 		return todos;
 	}
-// Need to upgrade to database operation
+
 	public void addTodo(Todo todo) {
-//		todos.add(todo);
 		try {
 			Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/to-do_users?useSSL=false","root","admin");
 			Statement myStmt = myConn.createStatement();
 			String sql = "insert into todos "
 					+ "(description, category, owner)"
-					+ "values('" + todo.getName() + "','" + todo.getCategory() + "','" + todo.getOwner() +"')";
+					+ "values('" + todo.getName() + "','" + todo.getCategory() + "','" + todo.getOwner() +"');";
 			myStmt.executeUpdate(sql);
-			System.out.println("Insert complete");
 		}
 		catch(Exception exc) {
 			exc.printStackTrace();
 		}
 	}
-// Need to upgrade to database operation	
+
 	public void deleteTodo(Todo todo) {
-		todos.remove(todo);
+		try {
+			Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/to-do_users?useSSL=false","root","admin");
+			Statement myStmt = myConn.createStatement();
+			String sql = "delete from todos where description = '" + todo.getName() 
+						+"' AND category = '" + todo.getCategory() 
+						+"' AND owner = '" +todo.getOwner() +"';";
+			myStmt.executeUpdate(sql);
+		}
+		catch(Exception exc) {
+			exc.printStackTrace();
+		}
 	}
 	
 }
