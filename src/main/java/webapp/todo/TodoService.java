@@ -11,11 +11,11 @@ public class TodoService {
 	//Hard coded for now, ideally should talk to a database
 	private static List<Todo> todos = new ArrayList<Todo>();
 
-	public List<Todo> retrieveTodosDescriptionAndCategory(){
+	public List<Todo> retrieveTodosDescriptionAndCategory(String owner){
 		try {
 			Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/to-do_users?useSSL=false","root","admin");
 			Statement myStmt = myConn.createStatement();
-			ResultSet myRs = myStmt.executeQuery("select * from todos");
+			ResultSet myRs = myStmt.executeQuery("select * from todos where owner = '" + owner +"'");
 			todos.clear();
 			while (myRs.next()) {
 				todos.add(new Todo(myRs.getString("description"),

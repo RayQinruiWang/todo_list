@@ -21,7 +21,8 @@ public class ShowTodoServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		request.getSession().setAttribute("todo_description_and_categories", todoservice.retrieveTodosDescriptionAndCategory());
+		String owner = (String) request.getSession().getAttribute("name");
+		request.getSession().setAttribute("todo_description_and_categories", todoservice.retrieveTodosDescriptionAndCategory(owner));
 		request.getRequestDispatcher("/WEB-INF/views/todo_list.jsp").forward(request, response);
 	}
 	
