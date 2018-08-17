@@ -3,9 +3,9 @@
 
 	<div class="container">
 			Please specify your new action item <br>
+			Please note, to-dos with identical description/category pairs will be rejected <br>
 
 		<form action="/add-todo.do" method = "post" >
-			<p><font color = "red"> ${existingtodoerror}</font></p>
 			<fieldset class="form-group">
 				<label>Description</label>
 				<input name = "todo" type ="text" class="form-control"/><br>

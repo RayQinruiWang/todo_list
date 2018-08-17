@@ -56,5 +56,10 @@ public class TodoService {
 			exc.printStackTrace();
 		}
 	}
+
+	public Boolean exist(Todo newtodo) {
+		//Doesn't exist by default
+		return false;
+	}
 	
 }

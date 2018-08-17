@@ -27,21 +27,20 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		String newTodo = request.getParameter("todo");
+		String description = request.getParameter("todo");
 		String category = request.getParameter("category");
 		String owner = (String) request.getSession().getAttribute("name");
-		// has to implement into todo-service to check if the new todo exist
-		Boolean isTodoExist = false;
+		Todo newtodo = new Todo(description,category,owner);
+	
+		Boolean todoexist = todoservice.exist(newtodo);
 		
-		// If exist, create warning and go back to 
-		if (isTodoExist) {
-			// Here goes the code if the to-do to be created exist
-			request.setAttribute("existingtodoerror", "This to-do exist, please try again");
-			response.sendRedirect("/add_todo.do");
+		if (todoexist) {
+			System.out.println("We're here, todo exist");
+			response.sendRedirect("/add-todo.do");
 		}
 		
 		else{
-			todoservice.addTodo(new Todo(newTodo, category, owner));
+			todoservice.addTodo(newtodo);
 			response.sendRedirect("/list_todo.do");
 		}
 	}
