@@ -1,5 +1,15 @@
 <%@include file="../common/header.jspf" %>
-<%@include file="../common/navigation.jspf" %>
+	<nav class="navbar navbar-default">
+		<a href="/" class="navbar-brand">Ray's to-do List</a>
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="/list_todo.do">Home</a></li>
+			<li><a href="/list_todo.do">Todos</a></li>
+			<li><a href="https://ozone.oakton.com.au/">Ozone</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="/logout.do">Sign Up</a></li>
+		</ul>
+	</nav>
 
 	<div class="container">
 			<h1>Welcome to the to-do list</h1>

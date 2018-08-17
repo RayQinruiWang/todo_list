@@ -1,7 +1,7 @@
 <%@include file="../common/header.jspf" %>
 <%@include file="../common/navigation.jspf" %>
 
-	<div class="container">
+	<div class="wrapper">
 		<H1>Welcome ${name}</H1>
 		<table class="table table-striped">
 			<thead>
@@ -24,6 +24,7 @@
 			</tbody>
 		</table>	
 		<a class="btn btn-success" href="/add-todo.do">Add New Todo</a>
+		<div class ="push"></div>
 	</div>
 
 <%@include file="../common/footer.jspf" %>
