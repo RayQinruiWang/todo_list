@@ -23,11 +23,11 @@ public class SignUpServlet extends HttpServlet {
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		String username = request.getParameter("name");
+		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		if (signupservice.usernotExist()) {
 			signupservice.addUser(username, password);
-			request.getSession().setAttribute("name", username);
+			request.getSession().setAttribute("username", username);
 			response.sendRedirect("/list_todo.do");
 		}
 		else {

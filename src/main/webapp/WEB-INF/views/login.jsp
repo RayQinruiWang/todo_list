@@ -16,7 +16,7 @@
 			Please login first <br>
 			<form action="/login.do" method= "post">
 				<p><font color = "red"> ${errorMessage}</font></p>
-					Enter your name: <input type="text" name="name" class="form-control"/>
+					Enter your username: <input type="text" name="username" class="form-control"/>
 					Enter your password: <input type="password" name="password" type ="text" class="form-control"/> <br>
 					<input type = "submit" value = "login" class = "btn btn-success">
 			</form>

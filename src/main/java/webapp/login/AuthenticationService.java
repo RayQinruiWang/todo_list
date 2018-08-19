@@ -6,13 +6,13 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class AuthenticationService{
-	public boolean isUserVaild(String name, String password) {
+	public boolean isUserVaild(String username, String password) {
 		try {
 			Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/to-do_users?useSSL=false","root","admin");
 			Statement myStmt = myConn.createStatement();
 			ResultSet myRs = myStmt.executeQuery("select * from users");
 			while (myRs.next()) {
-				if(name.equals(myRs.getObject("username")) &&
+				if(username.equals(myRs.getObject("username")) &&
 					password.equals(myRs.getObject("password"))) {
 					return true;
 				}

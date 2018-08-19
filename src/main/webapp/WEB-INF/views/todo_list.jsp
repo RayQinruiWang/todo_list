@@ -2,7 +2,7 @@
 <%@include file="../common/navigation.jspf" %>
 
 	<div class="wrapper">
-		<H1>Welcome ${name}</H1>
+		<H1>Welcome ${username}</H1>
 		<table class="table table-striped">
 			<thead>
 				<caption>Your to-dos are</caption>

@@ -23,7 +23,7 @@ public class LoginRequiredFilter implements Filter {
 	public void doFilter(ServletRequest serveletRequest, ServletResponse serveletResponse, FilterChain chain)
 			throws IOException, ServletException {
 		HttpServletRequest request = (HttpServletRequest) serveletRequest;
-		if(request.getSession().getAttribute("name") != null||
+		if(request.getSession().getAttribute("username") != null||
 			request.getServletPath().equals("/signup.do")) {
 			chain.doFilter(serveletRequest, serveletResponse);
 		} else {

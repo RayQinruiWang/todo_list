@@ -20,7 +20,7 @@ public class DeleteTodoServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		String owner = (String)request.getSession().getAttribute("name");
+		String owner = (String)request.getSession().getAttribute("username");
 		todoservice.deleteTodo(new Todo(request.getParameter("todo"),request.getParameter("category"),owner));
 		response.sendRedirect("/list_todo.do");
 	}

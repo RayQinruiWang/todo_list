@@ -28,7 +28,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String description = request.getParameter("todo");
 		String category = request.getParameter("category");
-		String owner = (String) request.getSession().getAttribute("name");
+		String owner = (String) request.getSession().getAttribute("username");
 		Todo newtodo = new Todo(description,category,owner);
 	
 		Boolean todoexist = todoservice.exist(newtodo);

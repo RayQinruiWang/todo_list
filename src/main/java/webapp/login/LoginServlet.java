@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginServlet extends HttpServlet {
 	
 	private AuthenticationService authservice = new AuthenticationService();
-//	private TodoService todoservice = new TodoService();
 	
 	/**
 	 * 
@@ -26,12 +25,12 @@ public class LoginServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
-		String name = request.getParameter("name");
+		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		boolean isUserVaild = authservice.isUserVaild(name, password);
+		boolean isUserVaild = authservice.isUserVaild(username, password);
 		
 		if(isUserVaild) {
-			request.getSession().setAttribute("name", name);
+			request.getSession().setAttribute("username", username);
 			response.sendRedirect("/list_todo.do");
 		}
 		else {
