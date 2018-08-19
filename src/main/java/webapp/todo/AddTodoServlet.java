@@ -37,7 +37,6 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 			System.out.println("We're here, todo exist");
 			response.sendRedirect("/add-todo.do");
 		}
-		
 		else{
 			todoservice.addTodo(newtodo);
 			response.sendRedirect("/list_todo.do");

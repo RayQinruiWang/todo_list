@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import webapp.todo.TodoService;
 
-// This is the URL for the todo servlet
 @WebServlet(urlPatterns = "/list_todo.do")
 public class ShowTodoServlet extends HttpServlet {
 

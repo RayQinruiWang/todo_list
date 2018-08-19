@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TodoService {
-	//Hard coded for now, ideally should talk to a database
 	private static List<Todo> todos = new ArrayList<Todo>();
 
 	public List<Todo> retrieveTodosDescriptionAndCategory(String owner){
@@ -35,7 +34,7 @@ public class TodoService {
 			Statement myStmt = myConn.createStatement();
 			String sql = "insert into todos "
 					+ "(description, category, owner)"
-					+ "values('" + todo.getName() + "','" + todo.getCategory() + "','" + todo.getOwner() +"');";
+					+ "values('" + todo.getDescription() + "','" + todo.getCategory() + "','" + todo.getOwner() +"');";
 			myStmt.executeUpdate(sql);
 		}
 		catch(Exception exc) {
@@ -47,7 +46,7 @@ public class TodoService {
 		try {
 			Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/to-do_users?useSSL=false","root","admin");
 			Statement myStmt = myConn.createStatement();
-			String sql = "delete from todos where description = '" + todo.getName() 
+			String sql = "delete from todos where description = '" + todo.getDescription() 
 						+"' AND category = '" + todo.getCategory() 
 						+"' AND owner = '" +todo.getOwner() +"';";
 			myStmt.executeUpdate(sql);
@@ -58,7 +57,7 @@ public class TodoService {
 	}
 
 	public Boolean exist(Todo newtodo) {
-		//Doesn't exist by default
+		//Doesn't exist by default, let db reject
 		return false;
 	}
 	

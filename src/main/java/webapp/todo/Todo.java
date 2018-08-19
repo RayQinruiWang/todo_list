@@ -1,23 +1,23 @@
 package webapp.todo;
 
 public class Todo {
-	private String name;
+	private String description;
 	private String category;
 	private String owner;
 
 	public Todo(String name, String catagory, String owner) {
 		super();
-		this.name = name;
+		this.description = name;
 		this.category = catagory;
 		this.owner = owner;
 	}
 
-	public String getName() {
-		return name;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public String getCategory() {
@@ -38,14 +38,14 @@ public class Todo {
 
 	@Override
 	public String toString() {
-		return String.format("Todo [name=%s, category=%s]", name, category);
+		return String.format("Todo [name=%s, category=%s]", description, category);
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((description == null) ? 0 : description.hashCode());
 		return result;
 	}
 
@@ -58,10 +58,10 @@ public class Todo {
 		if (getClass() != obj.getClass())
 			return false;
 		Todo other = (Todo) obj;
-		if (name == null) {
-			if (other.name != null)
+		if (description == null) {
+			if (other.description != null)
 				return false;
-		} else if (!name.equals(other.name))
+		} else if (!description.equals(other.description))
 			return false;
 		return true;
 	}

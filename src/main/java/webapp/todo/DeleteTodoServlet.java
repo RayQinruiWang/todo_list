@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import webapp.todo.TodoService;
 
-// This is the URL for the todo servlet
 @WebServlet(urlPatterns = "/delete-todo.do")
 public class DeleteTodoServlet extends HttpServlet {
 
@@ -21,7 +20,7 @@ public class DeleteTodoServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		String owner = (String) request.getSession().getAttribute("name");
+		String owner = (String)request.getSession().getAttribute("name");
 		todoservice.deleteTodo(new Todo(request.getParameter("todo"),request.getParameter("category"),owner));
 		response.sendRedirect("/list_todo.do");
 	}

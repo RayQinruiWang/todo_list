@@ -16,9 +16,9 @@
 			<tbody>
 			<c:forEach items = "${todo_description_and_categories}" var= "todo">
 				<tr>
-					<td>${todo.name}</td>
+					<td>${todo.description}</td>
 					<td>${todo.category}</td>
-					<td>&nbsp; &nbsp; <a class ="btn btn-danger" href="/delete-todo.do?todo=${todo.name}&category=${todo.category}">Delete</a></td>
+					<td>&nbsp; &nbsp; <a class ="btn btn-danger" href="/delete-todo.do?todo=${todo.description}&category=${todo.category}">Delete</a></td>
 				</tr>
 			</c:forEach>
 			</tbody>
