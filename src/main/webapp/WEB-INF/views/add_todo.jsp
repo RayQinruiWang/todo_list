@@ -2,8 +2,8 @@
 <%@include file="../common/navigation.jspf" %>
 
 	<div class="container">
+			<p><font color = "red"> ${Todoexisterror}</font></p>
 			Please specify your new action item <br>
-			Please note, to-dos with identical description/category pairs will be rejected <br>
 
 		<form action="/add-todo.do" method = "post" >
 			<fieldset class="form-group">

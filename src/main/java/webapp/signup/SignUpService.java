@@ -1,4 +1,4 @@
-package webapp.login;
+package webapp.signup;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -35,7 +35,7 @@ public class SignUpService{
 		}
 		catch(Exception exc) {
 			exc.printStackTrace();
-			System.out.println("Same user exist!!!!!!");
+			System.out.println("Same user exist and you didn't catch it until db does!!!!!!");
 		}
 		}
 	}

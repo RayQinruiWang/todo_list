@@ -1,4 +1,4 @@
-package webapp.login;
+package webapp.signup;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

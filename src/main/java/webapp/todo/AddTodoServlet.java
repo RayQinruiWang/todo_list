@@ -20,7 +20,7 @@ public class AddTodoServlet extends HttpServlet {
 
 	@Override
 
-protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
 		request.getRequestDispatcher("/WEB-INF/views/add_todo.jsp").forward(request, response);
 	}
@@ -31,11 +31,9 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 		String owner = (String) request.getSession().getAttribute("username");
 		Todo newtodo = new Todo(description,category,owner);
 	
-		Boolean todoexist = todoservice.exist(newtodo);
-		
-		if (todoexist) {
-			System.out.println("We're here, todo exist");
-			response.sendRedirect("/add-todo.do");
+		if (todoservice.todoExist(newtodo)) {
+			request.setAttribute("Todoexisterror", "Sorry, this To-do already exist.");
+			request.getRequestDispatcher("/WEB-INF/views/add_todo.jsp").forward(request, response);
 		}
 		else{
 			todoservice.addTodo(newtodo);
