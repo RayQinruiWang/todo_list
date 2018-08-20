@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/signup.do")
 public class SignUpServlet extends HttpServlet {
-//	private SignUpService signupservice = new SignUpService();
-
 
 	/**
 	 * 
@@ -34,7 +32,7 @@ public class SignUpServlet extends HttpServlet {
 					response.sendRedirect("/list_todo.do");
 				}
 				else {
-					request.setAttribute("Userexisterror", "Sorry, this username is takem, please choose another username");
+					request.setAttribute("Userexisterror", "Sorry, this username is not available, please try another one");
 					request.getRequestDispatcher("/WEB-INF/views/signup.jsp").forward(request, response);
 				}
 
