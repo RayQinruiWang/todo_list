@@ -1,7 +1,7 @@
 <%@include file="../common/header.jspf" %>
 <%@include file="../common/navigation.jspf" %>
 
-	<div class="wrapper">
+	<div class="container">
 		<H1>Welcome ${username}</H1>
 		<table class="table table-striped">
 		
@@ -19,7 +19,9 @@
 				<tr>
 					<td>${todo.description}</td>
 					<td>${todo.category}</td>
-					<td>&nbsp; &nbsp; <a class ="btn btn-danger" href="/delete-todo.do?todo=${todo.description}&category=${todo.category}">Delete</a></td>
+					<td>&nbsp; &nbsp; <a class ="btn btn-danger" 
+											href="/delete-todo.do?todo=${todo.description}&category=${todo.category}"
+											role="button">Delete</a></td>
 				</tr>
 			</c:forEach>
 			</tbody>

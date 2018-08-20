@@ -6,7 +6,7 @@
 <head>
 <title>Welcome</title>
 <meta charset="ISO-8859-1">
-<link href="/webjars/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="/webjars/bootstrap/3.3.6/css/bootstrap.css"/>
 
 <style>
 	.footer {

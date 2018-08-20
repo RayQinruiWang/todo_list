@@ -16,7 +16,7 @@
 				<input name = "category" type ="text" class="form-control"/><br>
 			</fieldset>
 			
-			<input type= "submit" value = "Submit" class = "btn btn-success">
+			<input type= "submit" value = "Submit" class = "btn btn-success" role = "button">
 		</form>
 	</div>
 
