@@ -15,7 +15,7 @@
 			<h1>Welcome to the to-do list</h1>
 			Please login first <br>
 			<form action="/login.do" method= "post">
-				<p><font color = "red"> ${errorMessage}</font></p>
+				<p><font color = "red"> ${Wrongcredentialerror}</font></p>
 					Enter your username: <input type="text" name="username" class="form-control"/>
 					Enter your password: <input type="password" name="password" type ="text" class="form-control"/> <br>
 					<input type = "submit" value = "login" class = "btn btn-success">

@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
 			response.sendRedirect("/list_todo.do");
 		}
 		else {
-			request.setAttribute("errorMessage", "Invaid Credentials, please try again");
+			request.setAttribute("Wrongcredentialerror", "Invaid Credentials, please try again");
 			request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
 		}
 	}
