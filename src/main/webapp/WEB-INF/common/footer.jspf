@@ -1,8 +1,10 @@
-<div class = "container">
+
 	<footer class="footer">
-		<p>© Copyright Ray.Wang@Oakton.com.au 2018</p>
+		<div class = "container text-center">
+			<br>
+			<p>© Copyright Ray.Wang@Oakton.com.au 2018</p>
+		</div>
 	</footer>
-</div>
 
 	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
 	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>

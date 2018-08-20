@@ -6,7 +6,7 @@
 		<table class="table table-striped">
 		
 			<thead>
-				<caption>Your to-dos are</caption>
+				<caption><h3>Your to-dos are:</h3></caption>
 					<tr>
 						<th>Description</th>
 						<th>Category</th>

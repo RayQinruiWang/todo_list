@@ -15,7 +15,7 @@
 
 	<div class="container">
 			<h1>Welcome to the to-do list</h1>
-			Please login first <br>
+			<h3>Please login first :)</h3> <br>
 			<form action="/login.do" method= "post">
 				<p><font color = "red"> ${Wrongcredentialerror}</font></p>
 					Enter your username: <input type="text" name="username" class="form-control"/>
