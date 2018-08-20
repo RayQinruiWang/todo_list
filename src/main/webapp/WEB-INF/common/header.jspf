@@ -17,6 +17,10 @@
 		height: 60px;
 		background-color: white;
 	}
+	.login_button {
+    min-width: 160px;
+    max-width: 160px;
+	}
 </style>
 </head>
 <body>
