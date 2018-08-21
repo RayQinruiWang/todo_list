@@ -3,19 +3,27 @@
 		<nav class="navbar navbar-default">
 		<a href="/" class="navbar-brand">Ray's to-do List</a>
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="/list_todo.do"><span class = "glyphicon glyphicon-home"> Home</span></a></li>
-			<li><a href="/list_todo.do"><span class = "glyphicon glyphicon-list-alt"> Todos</span></a></li>
-			<li><a href="https://ozone.oakton.com.au/"><span class = "glyphicon glyphicon-flag"> Ozone</span></a></li>
-			<li><a href="/contact.do"><span class = "glyphicon glyphicon-envelope"> Contact</span>
-			</a></li>
-		</ul>
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/signup.do"><span class = "glyphicon glyphicon-user"> SignUp</span></a></li>
-		</ul>
+			<li class="active"><a href="/list_todo.do"><span class = "glyphicon glyphicon-home"></span> Home</a></li>
+			<li><a href="/list_todo.do"><span class = "glyphicon glyphicon-list-alt"></span> Todos</a></li>
+			<li><a href="https://ozone.oakton.com.au/"><span class = "glyphicon glyphicon-flag"></span> Ozone</a></li>
+			<li class = dropdown>
+				<a href="#" class ="dropdown-toggle" data-toggle= "dropdown" role = "button"> 
+					<span class = "glyphicon glyphicon-envelope"></span> Contact</a>
+				<ul class = "dropdown-menu">
+					<li><a>Email</a></li>
+					<li><a>Phone</a></li>
+					<li><a href = "https://goo.gl/maps/5h93QMXq49k">Address</a></li>
+				</ul>
+			</li>
+			
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/signup.do"><span class = "glyphicon glyphicon-user"></span> Sign Up &nbsp;</a></li>
+			</ul>
 		</nav>
 	</div>
 
-	<div class="container">
+	<div class="container">		
 			<h1>Welcome to the to-do list</h1>
 			<h3>Please login first :)</h3> <br>
 			<form action="/login.do" method= "post">
@@ -34,5 +42,6 @@
 						role="button">Login with Faceook</a>
 			</form>
 	</div>
+	
 
 <%@include file="../common/footer.jspf" %>

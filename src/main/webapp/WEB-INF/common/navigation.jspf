@@ -7,7 +7,7 @@
 			<li><a href="https://ozone.oakton.com.au/"><span class = "glyphicon glyphicon-flag"> Ozone</span></a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/logout.do"><span class = "glyphicon glyphicon-log-out"> Logout</span></a></li>
+			<li><a href="/logout.do"><span class = "glyphicon glyphicon-log-out"></span> Log out &nbsp;</a></li>
 		</ul>
 	</nav>
 </div>
