@@ -31,17 +31,17 @@
 					Enter your username: <input type="text" name="username" class="form-control"/>
 					Enter your password: <input type="password" name="password" type ="text" class="form-control"/> <br>
 					<input type = "submit" value = "login" class = "btn btn-success login_button"> <br>
-					or <br>
+					or: <br>
 					<a type = "button" 
-						class ="btn btn-danger login_button" 
+						class ="btn fa-google login_button" 
 						href="/google_login.do"
 						role="button">Login with Google</a>  
 					<a type = "button" 
-						class ="btn btn-primary login_button" 
+						class ="btn fa-facebook login_button" 
 						href="/facebook_login.do"
 						role="button">Login with Faceook</a>
 			</form>
 	</div>
-	
+
 
 <%@include file="../common/footer.jspf" %>

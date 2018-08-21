@@ -7,19 +7,42 @@
 <title>Welcome</title>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 	.footer {
-		position: absolute;
+		position: reative;
+		margin-top: -60px;
 		bottom: 0;
 		width: 100%;
 		height: 60px;
-		background-color: white;
+		background-color: #CFC9C9;
 	}
 	.login_button {
     min-width: 160px;
     max-width: 160px;
 	}
+	.fa {
+	padding: 20px;
+	font-size: 30px;
+	width: 70px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+	}
+	.fa-facebook {
+		background: #3B5998;
+		color: white;
+	}
+	.fa-linkedin {
+	background: #007bb5;
+	color: white;
+	}
+	.fa-google {
+	background: #dd4b39;
+	color: white;
+	}
+	
 </style>
 </head>
 <body>

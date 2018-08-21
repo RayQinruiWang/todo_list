@@ -1,15 +1,28 @@
 
-	<footer class="footer">
+<footer class="page-footer">
+		
+    <div class="container">
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <i class="fa fa-facebook"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">
+            <i class="fa fa-linkedin"> </i>
+          </a>
+        </li>
+      </ul>
+    </div>
 		<div class = "container text-center">
-			<br>
 			<p>© Copyright Ray.Wang@Oakton.com.au 2018</p>
 		</div>
-	</footer>
+</footer>
 
 	<script src="webjars/jquery/3.3.1-1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
-
 </body>
 
 </html>
