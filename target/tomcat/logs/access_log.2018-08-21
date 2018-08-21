@@ -594,3 +594,14 @@
 0:0:0:0:0:0:0:1 - - [21/Aug/2018:12:00:43 +1000] "GET /webjars/jquery/3.3.1-1/jquery.min.js HTTP/1.1" 304 - http-bio-8080-exec-3 3
 0:0:0:0:0:0:0:1 - - [21/Aug/2018:12:00:59 +1000] "GET / HTTP/1.1" 200 3474 http-bio-8080-exec-4 89
 0:0:0:0:0:0:0:1 - - [21/Aug/2018:12:00:59 +1000] "GET /webjars/jquery/3.3.1-1/jquery.min.js HTTP/1.1" 304 - http-bio-8080-exec-5 0
+0:0:0:0:0:0:0:1 - - [21/Aug/2018:13:16:58 +1000] "GET / HTTP/1.1" 200 3474 http-bio-8080-exec-1 71
+0:0:0:0:0:0:0:1 - - [21/Aug/2018:13:20:02 +1000] "GET / HTTP/1.1" 200 3474 http-bio-8080-exec-3 16
+0:0:0:0:0:0:0:1 - - [21/Aug/2018:13:20:02 +1000] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-4 2
+0:0:0:0:0:0:0:1 - - [21/Aug/2018:13:20:02 +1000] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-5 1
+0:0:0:0:0:0:0:1 - - [21/Aug/2018:13:24:12 +1000] "POST /login.do HTTP/1.1" 302 - http-bio-8080-exec-8 374
+0:0:0:0:0:0:0:1 - - [21/Aug/2018:13:24:13 +1000] "GET /list_todo.do HTTP/1.1" 200 4854 http-bio-8080-exec-9 712
+0:0:0:0:0:0:0:1 - - [21/Aug/2018:13:24:19 +1000] "GET /logout.do HTTP/1.1" 200 3474 http-bio-8080-exec-10 13
+0:0:0:0:0:0:0:1 - - [21/Aug/2018:13:25:13 +1000] "GET /logout.do HTTP/1.1" 200 3481 http-bio-8080-exec-10 115
+0:0:0:0:0:0:0:1 - - [21/Aug/2018:13:25:13 +1000] "GET /webjars/jquery/3.3.1-1/jquery.min.js HTTP/1.1" 304 - http-bio-8080-exec-10 5
+0:0:0:0:0:0:0:1 - - [21/Aug/2018:13:25:28 +1000] "GET /logout.do HTTP/1.1" 200 3495 http-bio-8080-exec-10 101
+0:0:0:0:0:0:0:1 - - [21/Aug/2018:13:25:28 +1000] "GET /webjars/jquery/3.3.1-1/jquery.min.js HTTP/1.1" 304 - http-bio-8080-exec-10 1
