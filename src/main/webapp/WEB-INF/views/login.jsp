@@ -39,7 +39,7 @@
 					<a type = "button" 
 						class ="btn fa-facebook login_button" 
 						href="/facebook_login.do"
-						role="button">Login with Faceook</a>
+						role="button">Login with Facebook</a>
 			</form>
 	</div>
 	<br>
